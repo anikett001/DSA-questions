@@ -1,3 +1,4 @@
+Q-1
 const findMissing = (arr) => {
   arr = arr.sort(); // [0,1,2,3,4,6,7,8,9]
   // edge cases
@@ -51,3 +52,4 @@ noOfBoxes([17,3,12,8,3,13,4,7,19,1],20);
 // T(O(n))
 // S(O(1))
 
+Q-2
