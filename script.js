@@ -52,4 +52,14 @@ noOfBoxes([17,3,12,8,3,13,4,7,19,1],20);
 // T(O(n))
 // S(O(1))
 
-Q-2
+Q-2 Intersection of Two Arrays
+
+var intersection = function(nums1, nums2) {
+    let res = [];
+    for(let nums of nums1){
+        if(nums2.includes(nums)){
+            res.push(nums)
+        }
+    }
+    return [...new Set(res)]
+};
