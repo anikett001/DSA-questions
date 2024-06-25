@@ -63,3 +63,15 @@ var intersection = function(nums1, nums2) {
     }
     return [...new Set(res)]
 };
+
+Q-3 Find the duplicate Number (L-287)
+
+let findDuplicate = function(nums) {
+if(nums[0] == nums[1]) return nums[0]
+let set = new Set();
+for(let num of nums){
+    if(set.has(num)) return num;
+    set.add(num)
+
+    }
+};
