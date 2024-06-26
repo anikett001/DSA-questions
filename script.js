@@ -64,7 +64,21 @@ var intersection = function(nums1, nums2) {
     return [...new Set(res)]
 };
 
-Q-3 Find the duplicate Number (L-287)
+
+Q-3 Intersection of Two Arrays II  (L-350)
+var intersect = function(nums1, nums2) {
+     let res = [];
+    if(nums1[0]== nums2[0]) res.push(nums1[0],nums2[0])
+    for(let nums of nums1){
+        if(nums2.includes(nums)){
+            res.push(nums)
+        }
+    }
+    return res
+};
+
+
+Q-4 Find the duplicate Number (L-287)
 
 let findDuplicate = function(nums) {
 if(nums[0] == nums[1]) return nums[0]
