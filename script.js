@@ -89,3 +89,27 @@ for(let num of nums){
 
     }
 };
+
+
+Q- Next Greater Element I  (L-496)
+
+
+var nextGreaterElement = function(nums1, nums2) {
+  let stack = [];
+  let res = new Array(nums1.length);
+  for(let i = nums2.length - 1;i >= 0;i--){
+  while (stack.length && nums2[i] >= stack[stack.length -1]){
+   stack.pop()
+    }
+    if (nums1.includes(nums2[i])){
+    let index = nums1.indexOf(nums2[i]);
+    if(stack.length){
+        res[index] = stack[stack.length - 1]
+        } else{
+        res[index] = -1;
+        }
+    }
+    stack.push(nums2[i])
+  }  
+  return res
+};
