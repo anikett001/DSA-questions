@@ -113,3 +113,20 @@ var nextGreaterElement = function(nums1, nums2) {
   }  
   return res
 };
+
+Q- Slowest Key (L-1629)
+
+
+let slowestKey = function(releaseTimes, keysPressed) {
+  let  max = releaseTimes[0];
+  let  char = keysPressed[0];
+  for(let i = 1;i<releaseTimes.length;i++){
+    if(releaseTimes[i]-releaseTimes[i-1] > max){
+        max = releaseTimes[i]-releaseTimes[i-1];
+        char = keysPressed[i]
+    }else if(releaseTimes[i]-releaseTimes[i-1] == max && keysPressed[i] > char){
+        char = keysPressed[i]
+    }
+  }  
+  return char
+};
