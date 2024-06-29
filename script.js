@@ -91,7 +91,7 @@ for(let num of nums){
 };
 
 
-Q- Next Greater Element I  (L-496)
+Q-5 Next Greater Element I  (L-496)
 
 
 var nextGreaterElement = function(nums1, nums2) {
@@ -114,7 +114,7 @@ var nextGreaterElement = function(nums1, nums2) {
   return res
 };
 
-Q- Slowest Key (L-1629)
+Q-6 Slowest Key (L-1629)
 
 
 let slowestKey = function(releaseTimes, keysPressed) {
@@ -130,3 +130,39 @@ let slowestKey = function(releaseTimes, keysPressed) {
   }  
   return char
 };
+
+Q-7 Set Matrix Zeroes (L-73)
+
+const setZeroes = (matrix) => {
+    // Creating two boolean matrix[i][0] = 0; firstRow / firstCol and setting them to false;
+let firstRow = false;
+let firstCol = false;
+
+for(let i = 0;i<matrix.length;i++){
+    for(let j = 0;j<matrix[0].length;j++){
+        if(matrix[i][j] == 0){
+            if( i == 0) firstRow = true;
+            if( j == 0) firstCol = true;
+            matrix[i][0] = 0;
+            matrix[0][j] = 0;
+        }
+    }
+}
+for(let i = 1; i<matrix.length;i++){
+    for(let j = 1; j< matrix[0].length; j++){
+        if(matrix[0][j] == 0 || matrix[i][0] == 0){
+            matrix[i][j] = 0
+        }
+    }
+}
+if(firstRow){
+    for(let j = 0; j< matrix[0].length;j++){
+        matrix[0][j] = 0
+    }
+}
+if(firstCol){
+    for(let i = 0; i< matrix.length;i++){
+        matrix[i][0] = 0
+    }
+}
+}
