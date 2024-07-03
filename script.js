@@ -166,3 +166,18 @@ if(firstCol){
     }
 }
 }
+
+Q- First Unique Character in a String (L-387)
+
+
+var firstUniqChar = function(s) {
+    let map  = {};
+    for(let i of s){
+       map[i] = (map[i] || 0)+1
+    }
+    for(let i = 0; i<s.length; i++){
+        if(map[s[i]] === 1) return i
+    }
+    return -1
+
+};
