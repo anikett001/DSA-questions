@@ -167,7 +167,7 @@ if(firstCol){
 }
 }
 
-Q- First Unique Character in a String (L-387)
+Q-8 First Unique Character in a String (L-387)
 
 
 var firstUniqChar = function(s) {
@@ -179,5 +179,18 @@ var firstUniqChar = function(s) {
         if(map[s[i]] === 1) return i
     }
     return -1
+
+};
+
+Q-9 First Unique Character in a String (L-540)
+
+
+const singleNonDuplicate = (nums, left = 0, right = nums.length - 1) => {
+
+    let sum = 0;
+    for(let num of nums){
+        sum ^= num
+    }
+    return sum
 
 };
