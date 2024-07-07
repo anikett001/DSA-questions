@@ -218,3 +218,38 @@ var findMedianSortedArrays = function(nums1, nums2) {
         return (nums[nums.length / 2] + nums[nums.length / 2 -1]) /2
     }
 };
+
+Q-11 Push or Pop elements from an Stack
+
+<!-- <input type="text" placeholder="Enter Stack element" id="newEL">
+    <button onclick="push()">Push</button>
+    <button onclick="pop()">pop</button>
+    <button onclick="show()">show</button> -->
+
+    let stack = [];
+        let size = stack.length;
+        function push () {
+            let newVal = document.getElementById('newEL').value
+            stack[size] = newVal;;
+            size += 1;
+            document.getElementById('newEL').value = ""
+            setTimeout(function () {
+                console.log(stack)
+            }, 1000);
+        }
+        function pop () {
+            if( size > 0){
+                stack.pop();
+            }else{
+                alert("Ther's no element in stack")
+            }
+            setTimeout(function () {
+                console.log(stack)
+            }, 1000);
+        }
+        function show(){
+            for(let i = 0;i<stack.length;i++){
+                console.log(stack[i])
+            }
+        }
+
